@@ -1,0 +1,45 @@
+Console.WriteLine("1-Encryption!");
+            Console.WriteLine("2-Decryption!");
+            int choise=Convert.ToInt32(Console.ReadLine());
+            if (choise == 1)
+            {
+                Console.WriteLine("Please enter your word will be encrypted!");
+                string word = Console.ReadLine();
+
+                char[] characters = new char[word.Length];
+
+                for (int i = 0; i < characters.Length; i++)
+                {
+                    characters[i] = Convert.ToChar(word.Substring(i, 1));
+                }
+                for (int i = 0; i < characters.Length; i++)
+                {
+                    characters[i] = Convert.ToChar(characters[i] + 6);
+                }
+                for (int i = 0; i < characters.Length; i++)
+                {
+                    Console.Write(characters[i]);
+                }
+            }
+            if (choise == 2)
+            {
+                Console.Write("Please enter your word will be decrypted !");
+
+                string word = Console.ReadLine();
+
+                char[] characters = new char[word.Length];
+
+                for (int i = 0; i < characters.Length; i++)
+                {
+                    characters[i] = Convert.ToChar(word.Substring(i, 1));
+                }
+                for (int i = 0; i < characters.Length; i++)
+                {
+                    characters[i] = Convert.ToChar(characters[i] - 6);
+                }
+                for (int i = 0; i < characters.Length; i++)
+                {
+                    Console.Write(characters[i]);
+                }
+            }
+            Console.ReadKey();
